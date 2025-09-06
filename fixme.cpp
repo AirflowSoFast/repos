@@ -80,7 +80,7 @@ const std::string SessionAgregator::returnSessionIfAlreadyExists(utility::string
             return connection.first;
         }
     }
-    return "";
+    return "nothing";
 }
 
 
