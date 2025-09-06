@@ -118,7 +118,11 @@ std::string SessionAgregator::getUserStatusFromCollection(std::string &userLogin
     auto collection = dbasedb.collection(CollectionCnst::PROFILE);
     auto cursor = collection.find_one({getFilter(userLogin)});
     auto userRights = cursor->view()[FieldCnst::STATUS].get_utf8().value.to_string();
+<<<<<<< HEAD
     return cursor;
+=======
+    return collection;
+>>>>>>> origin/feature/variant_2_student2
 }
 
 bsoncxx::builder::basic::document SessionAgregator::getFilter(std::string userLogin) {
